@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>configuracion</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="tile">
+        <section class="container">
+            <section class="row">
+                <div class="col-md-4">
+                        <h3 class="titulo">Selecciona una red wifi</h3>
+                        <hr>
+                        <div class="list-group" id="listaRedes">
+                          <a href="#" class="list-group-item">Cras justo odio
+                          </a>
+                          <a href="#" class="list-group-item dropdown-toggle" data-toggle="dropdown">Dapibus ac facilisis in</a>
+                          <a href="#" class="list-group-item">Morbi leo risus</a>
+                          <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                          <a href="#" class="list-group-item">Vestibulum at eros</a>
+                        </div>
+                </div>
+                <div class="col-md-8">
+                   <h1 class="titulo">Conectar</h1>
+                        <hr>
+                    <form action="" role="form" id="formConect">
+                            <input id="ssid" type="text" class="form-control" type="text" placeholder="Nombre de la red">
+                            <input id="clave" type="text" class="form-control" type="text" placeholder="Contraseña">
+                            <input type="submit" value="" class="form-control" id="btnConectar">
+                    </form>
+                </div>
+            </section>
+        </section>        
+    </section>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+                $("#listaRedes a").each(function(i,e){
+                    $(this).on("click",function(){
+                        $("input#ssid").val($(this).text());
+                    });
+                });
+                
+                $("#formConect").on("submit",function(){
+                    var ssid = $("#ssid").val();
+                    var pass = $("#clave").val();
+                    //haciendo peticion ajax
+                    $.ajax({
+                        url : "",
+                        data : { "ssid" : ssid, "passphre" : pass },
+                        type : "POST",
+                        dataType : "html",
+                        success : function(json) {
+                            alert("yes");
+                        },
+                        error : function(error){
+                            alert("algo pasó");
+                        }
+                    });
+                });
+            }
+        );
+    </script>
+</body>
+</html>

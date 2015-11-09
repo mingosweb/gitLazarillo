@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+        
+body{
+    background-image: url(../img/portada/fondo.png);
+    background-size: cover;
+    background-color: blue;
+}
+        
+img#logo{
+    height: 25em;
+    margin-top: 7em;
+}
+        
+a#btnStart{
+    margin: 2em auto;
+    width: 21em;
+    height: 6em;
+    background-image: url(../img/portada/btnInactive.png);
+    background-size: cover;
+}
+        
+a#btnStart:hover{
+    background-image: url(../img/portada/btnActive.png);
+    background-size: cover;
+}
+
+.option{
+    padding: 1em;
+}
+
+.option img:hover{
+    animation: bounce 1s;
+}
+
+.titulo{
+    margin: 1em auto;
+    text-align: center;
+    color: white;
+}
+
+#formConect{
+    padding: 2em;
+}
+
+#formConect input[type="text"]{
+    margin: 1em auto;
+    padding: 2em;
+    width: 90%;
+    height: 3em;
+    padding: 1em;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 20px;
+}
+
+#formConect input[type="submit"]{
+    margin: 1em auto;
+    border: none;
+    padding: 2em;
+    padding: 1em;
+    height: 4em;
+    width: 50%;
+    font-size: 1.4em;    
+    background-color: transparent;
+    background-image: url(../img/portada/btnInactive.png);
+    background-size: 100% 100%;
+}
+
+#formConect input[type="submit"]:hover{
+    background-image: url(../img/portada/btnActive.png);
+    background-size: 100% 100%;
+}
