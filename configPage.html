@@ -59,7 +59,7 @@
                             alert("yes");
                         },
                         error : function(error,msj){
-                            alert("algo pasó: "+msj);
+                            alert("algo pasó! codigo http:"+error.status+" . descripcoin del error"+error.responseText);
                         }
                     });
                 });
