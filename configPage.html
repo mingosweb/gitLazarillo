@@ -25,8 +25,12 @@
                         </div>
                 </div>-->
                 <div class="col-md-12">
+<<<<<<< HEAD
                       <a href="mainMenu.html"><i id="volver" class="fa fa-arrow-circle-o-left iconGeneral fa-4x"></i></a>
                        <span class="titulo center-block" style="font-size:3.5em">Conectar</span>
+=======
+                   <h1 class="titulo">Conectar</h1>
+>>>>>>> 3bed9380ce25a2b48fb5e31f2bc96b6a4f142241
                         <hr>
                     <form action="" role="form" id="formConect">
                             <input id="ssid" type="text" class="form-control" type="text" placeholder="Nombre de la red">
@@ -53,15 +57,15 @@
                     var pass = $("#clave").val();
                     //haciendo peticion ajax
                     $.ajax({
-                        url : "",
+                        url : "http//localhost:8001",
                         data : { "ssid" : ssid, "passphre" : pass },
                         type : "POST",
                         dataType : "html",
                         success : function(json) {
                             alert("yes");
                         },
-                        error : function(error){
-                            alert("algo pasó");
+                        error : function(error,msj){
+                            alert("algo pasó! codigo http:"+error.status+" . descripcoin del error"+error.responseText);
                         }
                     });
                 });
