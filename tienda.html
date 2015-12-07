@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lazarillo Store</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
+    <style>
+        div#opcionesCol #opciones.nav-pills > li > a.menuOption{
+            background: white; !important
+        }
+        
+        #opcionesCol > *{
+            margin: 1em auto;
+        }
+        
+        .imgGame .nameGame{
+            text-align: center;
+            margin: auto;
+        }
+        
+        .gamesRow{
+            margin: 2em auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div id="opcionesCol" class="col-md-4" style="background:orange">
+            <img src="img/headLazarillo.png" class="img-responsive" alt="lazarillo">
+            <ul id="opciones" class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Actividades</a>
+                </li> <li><a class="menuOption" href="#">Recursos descargables</a></li>
+                <li><a class="menuOption" href="#">Video clips</a></li>
+            </ul>
+            <a href="mainMenu.html"><i id="volver" class="fa fa-arrow-circle-o-left iconGeneral fa-4x"></i></a>
+        </div>
+        <div id="panelBanco" class="col-md-8">
+            <h2 class="titulo">MIS ACTIVIDADES</h2>
+            <hr>
+            <div class="games">
+                    
+            </div>
+            <nav id="paginator" class="pagination"></nav>
+    </section>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        
+        function paginar(numInicio){
+            $.ajax({
+                type : "get",
+                url : "http://localhost/gitLazarillo/restCore.php?accion=obtenerJuegosPagos&data="+numInicio+"",
+                dataType : "json",
+                success : function(data){
+                    var numFil = 0;
+                    console.log(data['vector']);
+                    if($('.gamesRow').length > 0){
+                        $('.gamesRow').each(function(i,e){
+                            $(this).remove();
+                        });
+                    }
+                    for(var i=0; i< data['vector'].length; i++){
+                        if(i == 0 || i % 3 == 0){
+                            $fila = $('<div class="row gamesRow"></div>');
+                            numFil+=1;
+                        }else{
+                            $fila = $('.gamesRow').eq(numFil-1);
+                        }
+                        $juego= $('<div class="col-md-4 col-sm-12 col-xs-12 juego">');
+                        var nombre = data['vector'][i].nombre;
+                        var url = data['vector'][i].urlImagen;
+                        var urlJuego = data['vector'][i].urlFuente;
+                        $content = $('<a href="'+urlJuego+'" ><img src="'+url+'" class="img-responsive center-block" alt=""></a><h4 for="" class="nameGame text-center">'+nombre+'</h4>');
+                        $juego.append($content);
+                        $fila.append($juego);
+                        if(i == 0 || i % 3 == 0){
+                            $('.games').append($fila);
+                        }
+                    }
+                },
+                error : function(error,msj){
+                    alert(msj);
+                }
+            });
+        }
+        
+        $(window).ready(function(){
+            var inicio = 0;
+            var Npagina = 0;
+            var total_paginas = 0;
+            $.ajax({
+                type : "get",
+                url : "http://localhost/gitLazarillo/restCore.php?accion=totalRegistros&data=null",
+                dataType : "json",
+                success : function(data){
+                    total_paginas = Math.ceil(data.total / 9);
+                    for(i = 0; i < total_paginas; i++){
+                        item = $("<li><a href='#'>"+(i+1)+"</a></li>");
+                        $("#paginator").append(item);
+                        item.on("click",function(i,e){
+                            pag = parseInt($(this).text());
+                            element = (pag-1)*9;
+                            paginar(element);
+                        });
+                    }
+                },
+                error : function(error,msj){
+                    alert(msj);
+                }
+            });
+            
+            paginar(0);
+            
+        });
+    </script>
+</body>
+</html>

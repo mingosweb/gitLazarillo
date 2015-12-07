@@ -62,7 +62,7 @@ a#btnStart:hover{
     padding: 2em;
     padding: 1em;
     height: 4em;
-    width: 50%;
+    width: 30%;
     font-size: 1.4em;    
     background-color: transparent;
     background-image: url(../img/portada/btnInactive.png);
@@ -72,4 +72,51 @@ a#btnStart:hover{
 #formConect input[type="submit"]:hover{
     background-image: url(../img/portada/btnActive.png);
     background-size: 100% 100%;
+}
+
+.embedGame{
+    width: 100%;
+    height: 40em;
+    background: blue;
+    -webkit-box-shadow: 0px 0px 15px;
+    margin-top: 1em;
+}
+
+.embedGame > iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#iconsGames{
+    padding-left: 28em;
+    margin: 0.5em;
+    -webkit-box-shadow: 0px 0px 15px;
+}
+
+#iconsGames span{
+    font-size: 3em;    
+    margin-left: 1em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+#iconsGames a:hover{
+    color: gray;
+}
+
+#optionsOff{
+    padding-left: 12em;
+}
+
+.iconGeneral{
+    color: white;
+}
+
+.iconGeneral:hover{
+    color: orange;
+}
+
+#volver{
+    position: fixed;
+    top: 80%;
 }

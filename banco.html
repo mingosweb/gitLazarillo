@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
     <style>
         div#opcionesCol #opciones.nav-pills > li > a.menuOption{
             background: white; !important
@@ -28,67 +29,36 @@
 </head>
 <body>
     <section class="container">
-        <div id="opcionesCol" class="col-md-4">
+        <div id="opcionesCol" class="col-md-4" style="background:orange">
             <img src="img/headLazarillo.png" class="img-responsive" alt="lazarillo">
             <ul id="opciones" class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#">Mis Actividades</a>
+                <li class="active"><a href="#">Mis Actividades </a>
                 </li> <li><a class="menuOption" href="#">Recursos descargables</a></li>
                 <li><a class="menuOption" href="#">Adquirir mas</a></li>
             </ul>
+            <a href="mainMenu.html"><i id="volver" class="fa fa-arrow-circle-o-left iconGeneral fa-4x"></i></a>
         </div>
         <div id="panelBanco" class="col-md-8">
             <h2 class="titulo">MIS ACTIVIDADES</h2>
             <hr>
-            <div class="row gamesRow">
-                <div class="col-md-4 col-sm-12 col-xs-12 juego">
-                    <img src="img/juegos/0.png" class="img-responsive center-block" alt="">
-                    <h4 for="" class="nameGame text-center">Nombre del juego un poco largo</h4>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 juego">
-                    <img src="img/juegos/0.png" class="img-responsive center-block" alt="">
-                    <h4 for="" class="nameGame text-center">Nombre del juego</h4>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 juego">
-                    <img src="img/juegos/0.png" class="img-responsive center-block" alt="">
-                    <h4 for="" class="nameGame text-center">Nombre del juego un poco mas largo de lo normal</h4>
-                </div
+            <div class="games">
+                    <div class="row gamesRow">
+                        <div class="col-md-4 col-sm-12 col-xs-12 juego">
+                            <a href="gameVocales.html" ><img src="img/juegos/Icon_bombardeo_vocalico_lazarillo.png" class="img-responsive center-block" alt=""></a><h4 for="" class="nameGame text-center">bombardeo vocal</h4>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12 juego">
+                            <a href="gameVestirse.html" ><img src="img/juegos/Icon_Vestirse_lazarillo.png" class="img-responsive center-block" alt=""></a><h4 for="" class="nameGame text-center">Aprender a vestirse</h4>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-xs-12 juego">
+                            <a href="gameVestirse.html" ><img src="img/juegos/Encaja_las_figuras_lazarillo.png" class="img-responsive center-block" alt=""></a><h4 for="" class="nameGame text-center">Encajar figuras</h4>
+                        </div>
+                    </div>
             </div>
-            <div class="row gamesRow">
-                <div class="col-md-4 col-sm-12 col-xs-12 juego">
-                    <img src="img/juegos/0.png" class="img-responsive center-block" alt="">
-                    <h4 for="" class="nameGame text-center">Nombre del juego un poco largo</h4>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 juego">
-                    <img src="img/juegos/0.png" class="img-responsive center-block" alt="">
-                    <h4 for="" class="nameGame text-center">Nombre del juego</h4>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 juego">
-                    <img src="img/juegos/0.png" class="img-responsive center-block" alt="">
-                    <h4 for="" class="nameGame text-center">
-                            Nombre del juego un poco largo mas de lo normal
-                    </h4>
-                </div>
-            </div>
-            <div class="row gamesRow">
-                <div class="col-md-4 col-sm-12 col-xs-12 juego">
-                    <img src="img/juegos/0.png" class="img-responsive center-block" alt="">
-                    <h4 for="" class="nameGame text-center">Nombre del juego un poco largo</h4>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 juego">
-                    <img src="img/juegos/0.png" class="img-responsive center-block" alt="">
-                    <h4 for="" class="nameGame text-center">Nombre del juego</h4>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 juego">
-                    <img src="img/juegos/0.png" class="img-responsive center-block" alt="">
-                    <h4 for="" class="nameGame text-center">Nombre del juego un poco mas largo de lo normal</h4>
-                </div
-            </div>
-            <hr>
-            <ul class="pager">
-                <li class="previous disable"><a href="#">&larr; Anterior</a></li>
-                <li class="next"><a href="#">Siguiente &rarr;</a></li>
-            </ul>
-        </div>
+            <nav id="paginator" class="pagination"></nav>
     </section>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+    
+    </script>
 </body>
 </html>

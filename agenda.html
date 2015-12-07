@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Agenda</title>
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
+</head>
+<body>
+	<section class="container">
+		<div id="agendaDiaria" class="row">
+			<hr>
+			<h3 class="titulo">AGENDA DIARIA</h3>
+			<hr>
+			<div class="gridAgendaDiaria row">
+				<div class="row" data-jornada="dia">
+					<div class="colAgenda col-md-2"><h3 class="text-center titulo">DIA</h3></div>
+					<div class="colAgenda col-md-2" data-pos="0"><img src="img/options/0.png" class="img-agenda img-responsive" alt=""></div>
+					<div class="colAgenda col-md-2" data-pos="1"><img src="img/options/1.png" class="img-agenda img-responsive" alt=""></div>
+					<div class="colAgenda col-md-2" data-pos="2"><img src="img/options/2.png" class="img-agenda img-responsive" alt=""></div>		
+					<div class="colAgenda col-md-2" data-pos="3"><img src="img/options/2.png" class="img-agenda img-responsive" alt=""></div>		
+					<div class="colAgenda col-md-1"><button class="btn btn-default" data-toggle="modal" data-target="#MyModal">cambiar</button></div>
+				</div>
+				<div class="row" data-jornada="tarde">
+					<div class="colAgenda col-md-2" data-pos="0"><h3 class="text-center titulo">TARDE</h3></div>
+					<div class="colAgenda col-md-2" data-pos="1"><img src="img/options/0.png" class="img-agenda img-responsive" alt=""></div>
+					<div class="colAgenda col-md-2" data-pos="2"><img src="img/options/1.png" class="img-agenda img-responsive" alt=""></div>
+					<div class="colAgenda col-md-2" data-pos="3"><img src="img/options/2.png" class="img-agenda img-responsive" alt=""></div>		
+					<div class="colAgenda col-md-2" data-pos="4"><img src="img/options/2.png" class="img-agenda img-responsive" alt=""></div>		
+					<div class="colAgenda col-md-1"><button class="btn btn-default">cambiar</button></div>
+				</div>
+				<div class="row" data-jornada="noche">
+					<div class="colAgenda col-md-2" data-pos="0"><h3 class="text-center titulo">NOCHE</h3></div>
+					<div class="colAgenda col-md-2" data-pos="1"><img src="img/options/0.png" class="img-agenda img-responsive" alt=""></div>
+					<div class="colAgenda col-md-2" data-pos="2"><img src="img/options/1.png" class="img-agenda img-responsive" alt=""></div>
+					<div class="colAgenda col-md-2" data-pos="3"><img src="img/options/2.png" class="img-agenda img-responsive" alt=""></div>		
+					<div class="colAgenda col-md-2" data-pos="4"><img src="img/options/2.png" class="img-agenda img-responsive" alt=""></div>		
+					<div class="colAgenda col-md-1"><button class="btn btn-default">cambiar</button></div>
+				</div>
+			</div>
+		</div>
+		<div id="agendaSemanal" class="row">
+			<hr>
+			<h3 class="titulo">AGENDA SEMANAL</h3>
+			<hr>
+			<div class="gridAgendaDiaria" class="row">
+				<div class="row">
+					<div class="colAgenda col-md-3">
+					<h3 class="text-center titulo">lUNES</h3>
+					<img src="img/options/1.png" class="img-agenda img-responsive" alt=""></div>
+					<div class="colAgenda col-md-3">
+					<h3 class="text-center titulo">Martes</h3>
+					<img src="img/options/0.png" class="img-agenda img-responsive" alt=""></div>
+					<div class="colAgenda col-md-3">
+					<h3 class="text-center titulo">Miercoles</h3>
+					<img src="img/options/1.png" class="img-agenda img-responsive" alt=""></div>
+					<div class="colAgenda col-md-3">
+					<h3 class="text-center titulo">Jueves</h3>
+					<img src="img/options/2.png" class="img-agenda img-responsive" alt=""></div>		
+				</div>
+				<div class="row">
+					<div class="colAgenda col-md-4">
+					<h3 class="text-center titulo">Viernes</h3>
+					<img src="img/options/2.png" class="img-agenda img-responsive" alt=""></div>
+					<div class="colAgenda col-md-4">
+					<h3 class="text-center titulo">Sabado</h3>
+					<img src="img/options/2.png" class="img-agenda img-responsive" alt=""></div>
+					<div class="colAgenda col-md-4">
+					<h3 class="text-center titulo">Domingo</h3>
+					<img src="img/options/2.png" class="img-agenda img-responsive" alt=""></div>
+				</div>
+				<div class="row">
+					<button class="btn btn-default center-block">cambiar</button>
+				</div>
+			</div>
+		</div>
+		<hr>
+	</section>
+	
+	<div id="MyModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h4 class="modal-title" id="myModalLabel">Banco de imagenes</h4>
+            </div>
+            <div class="modal-body">
+                <section class="row">
+                	<div class="col-md-4" data-pos="4"><img src="img/options/2.png" class="pictograma img-responsive" alt=""></div>		
+                	<div class="col-md-4" data-pos="4"><img src="img/options/2.png" class="pictograma img-responsive" alt=""></div>		
+                	<div class="col-md-4" data-pos="4"><img src="img/options/2.png" class="pictograma img-responsive" alt=""></div>		
+                </section>
+                <section class="row">
+                	<div class="col-md-4" data-pos="4"><img src="img/options/2.png" class="pictograma img-responsive" alt=""></div>		
+                	<div class="col-md-4" data-pos="4"><img src="img/options/2.png" class="pictograma img-responsive" alt=""></div>		
+                	<div class="col-md-4" data-pos="4"><img src="img/options/2.png" class="pictograma img-responsive" alt=""></div>		
+                </section>
+                <section class="row">
+                	<div class="col-md-4" data-pos="4"><img src="img/options/2.png" class="pictograma img-responsive" alt=""></div>		
+                	<div class="col-md-4" data-pos="4"><img src="img/options/2.png" class="pictograma img-responsive" alt=""></div>		
+                	<div class="col-md-4" data-pos="4"><img src="img/options/2.png" class="pictograma img-responsive" alt=""></div>		
+                </section>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Seleccionar</button>
+	        </div>
+    	</div>
+  		</div>
+	</div>
+	
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="css/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		var jornada = "";
+		var pos = "";
+		$(window).ready(function(){
+			$(".colAgenda").each(function(i,e){
+				$(this).on("click",function(){
+					jornada = $(this).parent().attr("data-jornada");
+					pos = $(this).attr("data-pos");
+					//alert(jornada+"/"+pos);
+				});
+			});
+            
+            $.ajax({
+                type : "get",
+                url : "http://localhost/gitLazarillo/restCore.php",
+                dataType : "json",
+                success : function(data){
+                    var numFil = 0;
+                    for(var i=0; i< data['vector'].length; i++){
+                        if(i == 0 || i % 3 == 0){
+                            $fila = $('<div class="row gamesRow"></div>');
+                            numFil+=1;
+                        }else{
+                            $fila = $('.gamesRow').eq(numFil-1);
+                        }
+                        $juego= $('<div class="col-md-4 col-sm-12 col-xs-12 juego">');
+                        var nombre = data['vector'][i].nombre;
+                        var url = data['vector'][i].urlImagen;
+                        var urlJuego = data['vector'][i].urlFuente;
+                        $content = $('<a href="'+urlJuego+'" ><img src="'+url+'" class="img-responsive center-block" alt=""></a><h4 for="" class="nameGame text-center">'+nombre+'</h4>');
+                        $juego.append($content);
+                        $fila.append($juego);
+                        if(i == 0 || i % 3 == 0){
+                            $('.games').append($fila);
+                        }
+                    }
+                },
+                error : function(error,msj){
+                    alert(msj);
+                }
+            });
+            
+		});
+        
+        
+	</script>
+</body>
+</html>
